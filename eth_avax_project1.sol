@@ -8,7 +8,7 @@ Contract successfully uses assert()
 Contract successfully uses revert() statements
 */
 
-contract MyToken {
+contract project1 {
     //require
     function requireFunc(int _number) public pure returns (int) {
         require(_number > 5, "The number must be higher than 5."); 
