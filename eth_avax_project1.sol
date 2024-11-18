@@ -25,10 +25,12 @@ contract project1 {
     }
 
     // revert
-    function revertFunc(int _number) public view {
-        if (_number <= testBal) {
-            revert("The number is not higher than the balance!");
+    function revertFunc(int _number) public returns (int) {
+        if (_number >= testBal) {
+            revert("The number is higher than the balance!");
         }
+        testBal -= _number;
+        return testBal;
     }
     
     // Function to return the contract's balance
